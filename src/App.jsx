@@ -65,24 +65,7 @@ export default function App() {
         </nav>
       </header>
 
-      {/* Cloud Environment Bar */}
-      <section className="env-banner">
-        <div className="env-item">
-          <span className="env-label">Frontend Host:</span>
-          <span className="env-tag vercel">Vercel (Production CDN)</span>
-        </div>
-        <div className="env-item">
-          <span className="env-label">Backend Target (VITE_API_URL):</span>
-          <code className="env-code">{API}</code>
-        </div>
-        <div className="env-item">
-          <span className="env-label">Status:</span>
-          <span className={`status-pill ${status.type}`}>{status.text}</span>
-        </div>
-        <button className="refresh-btn" onClick={fetchMenu} disabled={loading}>
-          {loading ? 'Fetching...' : 'Re-test API'}
-        </button>
-      </section>
+
 
       <main className="main-content">
         {activeTab === 'menu' && (
